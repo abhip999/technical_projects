@@ -58,6 +58,15 @@ Built using Groq API and LLaMA 3 model, the system efficiently summarizes long-f
 
 ```bash
 git clone https://github.com/abhip999/technical_projects.git
-cd llm-text-summarizer
-
 pip install -r requirements.txt
+
+# utilize below to go to respective folders and run the main files
+cd text_summarization
+cd review_summarization
+cd RAG_based_QA
+cd PDF_based_RAG
+cd multi_agent_AI_system
+cd AI_agents
+cd agentic_AI
+
+

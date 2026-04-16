@@ -1,5 +1,6 @@
 # This repo contains multiple but small projects related to gen-AI
 ## LLM based text sumarization using Groq API - Project structure
+```bash
 Text_summarization/
 │
 ├── app/
@@ -17,7 +18,7 @@ Text_summarization/
 ├── README.md
 ├── .env                    # API key (not pushed to GitHub)
 ├── .gitignore
-
+```
 
 ## 📄 LLM Text Summarizer (Groq API)
 
@@ -56,7 +57,7 @@ Built using Groq API and LLaMA 3 model, the system efficiently summarizes long-f
 ### 📦 Installation
 
 ```bash
-git clone https://github.com/your-username/llm-text-summarizer.git
+git clone https://github.com/abhip999/technical_projects.git
 cd llm-text-summarizer
 
 pip install -r requirements.txt

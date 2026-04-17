@@ -40,6 +40,7 @@ Built using Groq API and LLaMA 3 model, the system efficiently summarizes long-f
 ### ⚙️ Tech Stack
 - Python
 - Streamlit
+- LangChain
 - Groq API (LLaMA 3)
 - NLTK (optional preprocessing)
 

@@ -1,8 +1,13 @@
+pandas
 streamlit
 groq
 python-dotenv
 nltk
+PyPDF2
 watchdog
 langchain
 langchain-community
 langchain-groq
+matplotlib
+wordcloud
+reportlab

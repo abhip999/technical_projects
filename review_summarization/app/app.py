@@ -173,12 +173,10 @@ if uploaded_file:
 
             # Charts
             st.subheader("📊 Sentiment Distribution")
-            fig1 = plot_sentiment(positives, negatives)
-            st.pyplot(fig1)
+            fig1, sentiment_img = plot_sentiment(positives, negatives)
 
             st.subheader("☁️ Word Cloud")
-            fig2 = generate_wordcloud(" ".join(positives + negatives))
-            st.pyplot(fig2)
+            fig2, wordcloud_img = generate_wordcloud(" ".join(positives + negatives))
 
             # After analysis
             summary = result.split("Positives")[0]  # simple extraction

@@ -7,17 +7,20 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import FAISS
 
-from langchain.chat_models import ChatOpenAI
+from langchain_groq import ChatGroq
+from langchain_openai import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
+from config.config import HF_TOKEN, MODEL_NAME
 
 # Page config
 st.set_page_config(page_title="RAG Chat App", layout="wide")
 st.title("💬 RAG Chat with Multi-Docs")
 
 # Load API key
-os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
-
+os.environ["HF_TOKEN"] = HF_TOKEN
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 # Session state init
 if "vector_store" not in st.session_state:
     st.session_state.vector_store = None
@@ -75,8 +78,8 @@ if uploaded_files:
 # Chat UI
 if st.session_state.vector_store:
 
-    llm = ChatOpenAI(temperature=0)
-
+    llm = ChatGroq(model=MODEL_NAME,temperature=0)
+    #llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0, openai_api_key=OPENAI_API_KEY)
     qa_chain = ConversationalRetrievalChain.from_llm(
         llm=llm,
         retriever=st.session_state.vector_store.as_retriever(),

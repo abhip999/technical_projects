@@ -71,3 +71,55 @@ cd AI_agents
 cd agentic_AI
 
 
+# 🤖 Multi-Agent AI Research System (AutoGPT-style)
+
+A production-ready multi-agent AI system that performs **planning, research, synthesis, and review** using LLMs and external tools like Wikipedia, Arxiv, and DuckDuckGo.
+
+---
+
+## 🚀 Features
+
+- 🧠 Planner Agent (breaks query into steps)
+- 🔍 Research Agent (tool-calling: Wikipedia, Arxiv, DuckDuckGo)
+- ✍️ Writer Agent (generates structured answer)
+- ✅ Reviewer Agent (improves quality)
+- 🔄 Controlled execution loop (AutoGPT-style but stable)
+- 🖥️ Streamlit UI
+
+---
+
+```mermaid
+graph TD
+    A[User Query] --> B[Planner Agent]
+    B --> C[Execution Loop]
+
+    C --> D[Research Agent]
+    D -->|Wikipedia| W[Wiki API]
+    D -->|Arxiv| X[Arxiv API]
+    D -->|DuckDuckGo| G[Search API]
+
+    C --> E[Writer Agent]
+    E --> F[Draft Answer]
+
+    F --> H[Reviewer Agent]
+    H --> I[Final Answer]
+
+    I --> J[Streamlit UI]
+
+
+flowchart LR
+    U[User] --> P[Planner Agent]
+    P --> L[Plan Steps]
+
+    L --> R[Research Agent]
+    R --> W[Wikipedia]
+    R --> A[Arxiv]
+    R --> D[DuckDuckGo]
+
+    R --> WR[Writer Agent]
+    WR --> DR[Draft]
+
+    DR --> RV[Reviewer Agent]
+    RV --> FA[Final Answer]
+
+    FA --> UI[Streamlit UI]

@@ -106,20 +106,4 @@ graph TD
 
     I --> J[Streamlit UI]
 
-
-flowchart LR
-    U[User] --> P[Planner Agent]
-    P --> L[Plan Steps]
-
-    L --> R[Research Agent]
-    R --> W[Wikipedia]
-    R --> A[Arxiv]
-    R --> D[DuckDuckGo]
-
-    R --> WR[Writer Agent]
-    WR --> DR[Draft]
-
-    DR --> RV[Reviewer Agent]
-    RV --> FA[Final Answer]
-
-    FA --> UI[Streamlit UI]
+<img width="1356" height="381" alt="Screenshot 2026-04-19 at 4 15 00 PM" src="https://github.com/user-attachments/assets/f9f0f279-4464-4348-8153-1429150a2873" />

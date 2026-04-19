@@ -13,3 +13,10 @@ wordcloud
 reportlab
 openai
 langchain-openai
+faiss-cpu
+sentence-transformers
+pypdf 
+python-docx 
+python-pptx 
+unstructured 
+ollama

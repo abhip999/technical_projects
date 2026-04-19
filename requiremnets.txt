@@ -22,3 +22,8 @@ unstructured
 ollama
 pydantic
 langchain-core
+wikipedia
+arxiv 
+duckduckgo_search
+crewai
+litellm
